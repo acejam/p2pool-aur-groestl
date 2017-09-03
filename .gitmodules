@@ -1,0 +1,3 @@
+[submodule "myr-groestl_hash"]
+	path = myr-groestl_hash
+	url = https://github.com/vergecurrency/myr-groestl_hash.git
