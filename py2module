@@ -1,0 +1,114 @@
+#!/bin/bash
+
+# p2pool/util
+mkdir p2pool/util/old
+nuitka --module p2pool/util/datachunker.py --output-dir=p2pool/util
+mv p2pool/util/datachunker.py p2pool/util/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'datachunker.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/util/datachunker.py
+nuitka --module --recurse-none p2pool/util/deferral.py --output-dir=p2pool/util
+mv p2pool/util/deferral.py p2pool/util/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'deferral.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/util/deferral.py
+nuitka --module --recurse-none p2pool/util/deferred_resource.py --output-dir=p2pool/util
+mv p2pool/util/deferred_resource.py p2pool/util/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'deferred_resource.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/util/deferred_resource.py
+nuitka --module --recurse-none p2pool/util/expiring_dict.py --output-dir=p2pool/util
+mv p2pool/util/expiring_dict.py p2pool/util/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'expiring_dict.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/util/expiring_dict.py
+nuitka --module p2pool/util/fixargparse.py --output-dir=p2pool/util
+mv p2pool/util/fixargparse.py p2pool/util/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'fixargparse.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/util/fixargparse.py
+nuitka --module --recurse-none p2pool/util/forest.py --output-dir=p2pool/util
+mv p2pool/util/forest.py p2pool/util/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'forest.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/util/forest.py
+nuitka --module --recurse-none p2pool/util/graph.py --output-dir=p2pool/util
+mv p2pool/util/graph.py p2pool/util/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'graph.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/util/graph.py
+nuitka --module --recurse-none p2pool/util/jsonrpc.py --output-dir=p2pool/util
+mv p2pool/util/jsonrpc.py p2pool/util/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'jsonrpc.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/util/jsonrpc.py
+nuitka --module --recurse-none p2pool/util/logging.py --output-dir=p2pool/util
+mv p2pool/util/logging.py p2pool/util/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'logging.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/util/logging.py
+nuitka --module p2pool/util/math.py --output-dir=p2pool/util
+mv p2pool/util/math.py p2pool/util/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'math.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/util/math.py
+nuitka --module p2pool/util/memoize.py --output-dir=p2pool/util
+mv p2pool/util/memoize.py p2pool/util/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'memoize.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/util/memoize.py
+nuitka --module --recurse-none p2pool/util/p2protocol.py --output-dir=p2pool/util
+mv p2pool/util/p2protocol.py p2pool/util/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'p2protocol.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/util/p2protocol.py
+nuitka --module --recurse-none p2pool/util/pack.py --output-dir=p2pool/util
+mv p2pool/util/pack.py p2pool/util/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'pack.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/util/pack.py
+nuitka --module --recurse-none p2pool/util/skiplist.py --output-dir=p2pool/util
+mv p2pool/util/skiplist.py p2pool/util/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'skiplist.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/util/skiplist.py
+nuitka --module --recurse-none p2pool/util/switchprotocol.py --output-dir=p2pool/util
+mv p2pool/util/switchprotocol.py p2pool/util/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'switchprotocol.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/util/switchprotocol.py
+nuitka --module --recurse-none p2pool/util/variable.py --output-dir=p2pool/util
+mv p2pool/util/variable.py p2pool/util/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'variable.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/util/variable.py
+# p2pool/bitcoin/networks
+mkdir p2pool/bitcoin/networks/old
+nuitka --module --recurse-none p2pool/bitcoin/networks/auroracoin.py --output-dir=p2pool/bitcoin/networks
+mv p2pool/bitcoin/networks/auroracoin.py p2pool/bitcoin/networks/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'bitcoin.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/bitcoin/networks/auroracoin.py
+# p2pool/bitcoin
+mkdir p2pool/bitcoin/old
+nuitka --module --recurse-none p2pool/bitcoin/data.py --output-dir=p2pool/bitcoin
+mv p2pool/bitcoin/data.py p2pool/bitcoin/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'data.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/bitcoin/data.py
+nuitka --module --recurse-none p2pool/bitcoin/getwork.py --output-dir=p2pool/bitcoin
+mv p2pool/bitcoin/getwork.py p2pool/bitcoin/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'getwork.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/bitcoin/getwork.py
+nuitka --module --recurse-none p2pool/bitcoin/height_tracker.py --output-dir=p2pool/bitcoin
+mv p2pool/bitcoin/height_tracker.py p2pool/bitcoin/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'height_tracker.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/bitcoin/height_tracker.py
+nuitka --module --recurse-none p2pool/bitcoin/helper.py --output-dir=p2pool/bitcoin
+mv p2pool/bitcoin/helper.py p2pool/bitcoin/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'helper.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/bitcoin/helper.py
+# nuitka --module --recurse-none p2pool/bitcoin/networks.py --output-dir=p2pool/bitcoin
+# mv p2pool/bitcoin/networks.py p2pool/bitcoin/old
+# echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'networks.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/bitcoin/networks.py
+nuitka --module --recurse-none p2pool/bitcoin/p2p.py --output-dir=p2pool/bitcoin
+mv p2pool/bitcoin/p2p.py p2pool/bitcoin/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'p2p.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/bitcoin/p2p.py
+nuitka --module --recurse-none p2pool/bitcoin/script.py --output-dir=p2pool/bitcoin
+mv p2pool/bitcoin/script.py p2pool/bitcoin/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'script.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/bitcoin/script.py
+nuitka --module --recurse-none p2pool/bitcoin/sha256.py --output-dir=p2pool/bitcoin
+mv p2pool/bitcoin/sha256.py p2pool/bitcoin/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'sha256.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/bitcoin/sha256.py
+nuitka --module --recurse-none p2pool/bitcoin/stratum.py --output-dir=p2pool/bitcoin
+mv p2pool/bitcoin/stratum.py p2pool/bitcoin/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'stratum.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/bitcoin/stratum.py
+nuitka --module --recurse-none p2pool/bitcoin/worker_interface.py --output-dir=p2pool/bitcoin
+mv p2pool/bitcoin/worker_interface.py p2pool/bitcoin/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'worker_interface.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/bitcoin/worker_interface.py
+# p2pool/networks
+mkdir p2pool/networks/old
+nuitka --module --recurse-none p2pool/networks/auroracoin.py --output-dir=p2pool/networks
+mv p2pool/networks/auroracoin.py p2pool/networks/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'bitcoin.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/networks/auroracoin.py
+# p2pool
+mkdir p2pool/old
+nuitka --module --recurse-none p2pool/data.py --output-dir=p2pool
+mv p2pool/data.py p2pool/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'data.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/data.py
+nuitka --module --recurse-none p2pool/main.py --output-dir=p2pool
+mv p2pool/main.py p2pool/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'main.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/main.py
+# nuitka --module --recurse-none p2pool/networks.py --output-dir=p2pool
+# mv p2pool/networks.py p2pool/old
+# echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'networks.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/networks.py
+nuitka --module --recurse-none p2pool/node.py --output-dir=p2pool
+mv p2pool/node.py p2pool/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'node.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/node.py
+nuitka --module --recurse-none p2pool/p2p.py --output-dir=p2pool
+mv p2pool/p2p.py p2pool/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'p2p.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/p2p.py
+nuitka --module --recurse-none p2pool/work.py --output-dir=p2pool
+mv p2pool/work.py p2pool/old
+echo -e "def __bootstrap__():\n   global __bootstrap__, __loader__, __file__\n   import sys, pkg_resources, imp\n   __file__ = pkg_resources.resource_filename(__name__,'work.so')\n   __loader__ = None; del __bootstrap__, __loader__\n   imp.load_dynamic(__name__,__file__)\n__bootstrap__()" >> p2pool/work.py
